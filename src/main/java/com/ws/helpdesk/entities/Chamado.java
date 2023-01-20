@@ -10,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.ws.helpdesk.enuns.Prioridade;
@@ -48,10 +47,9 @@ public class Chamado implements Serializable{
 		super();
 	}
 
-	public Chamado(Integer id, Prioridade prioridade, Status estatus, String titulo, String observacoes,
+	public Chamado(Prioridade prioridade, Status estatus, String titulo, String observacoes,
 			Tecnico tecnico, Cliente cliente) {
 		super();
-		this.id = id;
 		this.prioridade = prioridade;
 		this.estatus = estatus;
 		this.titulo = titulo;
